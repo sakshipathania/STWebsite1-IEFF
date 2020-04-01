@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.Selenium.firefox.FirefoxDriver;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
@@ -15,6 +16,7 @@ import cucumber.api.java.en.Then;
 
 public class Facebook_new_account_sign_in extends Set {
 	
+	WebDriver driver = new FirefoxDriver();
 	WebDriverWait wait = new FirefoxDriver(driver,50);
 
 

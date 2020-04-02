@@ -16,7 +16,7 @@ import cucumber.api.java.en.Then;
 
 public class Facebook_new_account_sign_in extends Set {
 	
-		WebDriverWait wait = new FirefoxDriver(driver,50);
+		WebDriverWait wait = new WebDriverWait(driver,50);
 
 
 	@Given("^user is already on Home Page new fb$")

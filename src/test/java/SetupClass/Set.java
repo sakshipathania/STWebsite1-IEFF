@@ -27,6 +27,7 @@ public class Set {
 	public String Button_Click_Time;
 	public String message_write_time;
 	public String TestFile = "C:\\Users\\slide53\\eclipse-workspace\\SlideTeamWebsiteFormsAuto\\write.txt";
+	System.setProperty("webdriver.gecko.driver", C:\Users\Administrator\Downloads\geckodriver-v0.23.0-win64 + "\\geckodriver.exe");
 	
 	@BeforeClass
 	public static void before_Class() throws Exception {

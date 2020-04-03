@@ -52,7 +52,7 @@ public class Set {
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
 			WebDriverManager.firefoxdriver().setup();
-			FirefoxOptions options = new Firefoxoptions();
+			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");
 			driver = new FirefoxDriver(options);
                         driver.manage().window().maximize();

@@ -52,8 +52,10 @@ public class Set {
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
 			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options = new Firefoxoption();
+			options.addArguments("--disable-notifications");
 			driver = new FirefoxDriver();
-
+                        driver.manage().window().maximize();
 			Thread.sleep(1000);
 		} else {
 
@@ -72,9 +74,9 @@ public class Set {
 	
 	@AfterClass
 	public static void after_Class() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		driver.quit();  //->> don't want to close the browser for now
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	
 	}
 

@@ -54,7 +54,7 @@ public class Set {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new Firefoxoptions();
 			options.addArguments("--disable-notifications");
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(options);
                         driver.manage().window().maximize();
 			Thread.sleep(1000);
 		} else {

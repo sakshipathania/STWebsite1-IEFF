@@ -53,7 +53,7 @@ public class Set {
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
 			WebDriverManager.firefoxdriver().setup();
-			public String path = "c:\\Users\\downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
+			String path = "c:\\Users\\downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
 	                System.setProperty = ("webdriver.gecko.driver",path);
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");

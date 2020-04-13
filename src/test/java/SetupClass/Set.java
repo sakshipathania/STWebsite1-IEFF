@@ -57,8 +57,8 @@ public class Set {
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
 			WebDriverManager.firefoxdriver().setup();	
-			//String path = "C://Users//Administrator//Downloads//geckodriver-v0.23.0-win64//geckodriver.exe";
-	                //System.setProperty("webdriver.gecko.driver",path);
+			String path = "C://Users//Administrator//Downloads//geckodriver-v0.26.0-win64//geckodriver.exe";
+	                System.setProperty("webdriver.gecko.driver",path);
 			DesiredCapabilities capabilities = new DesiredCapabilities();
                         capabilities.setCapability("marionette", true); 
 			FirefoxOptions options = new FirefoxOptions();

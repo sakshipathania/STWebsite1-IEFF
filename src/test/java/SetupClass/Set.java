@@ -23,7 +23,7 @@ public class Set {
 	public static String browserName;
 	public static Logger log;
 	public static WebElement webelement;
-	//public static String local_chrome;
+	public static String local_chrome;
 	public static String local_FFbrowser;
 	public String Button_Click_Time;
 	public String message_write_time;
@@ -36,7 +36,7 @@ public class Set {
 		log = Logger.getLogger(BeforeClass.class.getName());
 		property.load(new FileReader("Config//config.properties"));
 		AppURL = property.getProperty("App_url");
-		//local_chrome = property.getProperty("local_chrome");
+		local_chrome = property.getProperty("local_chrome");
 		local_FFbrowser = property.getProperty("local_FFbrowser");
 		// on source lab setup
 		AppURL = property.getProperty("App_url");

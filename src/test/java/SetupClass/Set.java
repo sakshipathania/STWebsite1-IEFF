@@ -41,7 +41,7 @@ public class Set {
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
 		String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
-	        System.setProperty = ("webdriver.gecko.driver",path);
+	        System.setProperty("webdriver.gecko.driver",path);
 	        WebDriver driver = new FirefoxDriver();
 		
 		

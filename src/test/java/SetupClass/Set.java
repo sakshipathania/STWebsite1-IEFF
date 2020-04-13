@@ -9,8 +9,6 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -23,7 +21,7 @@ public class Set {
 	public static String browserName;
 	public static Logger log;
 	public static WebElement webelement;
-	public static String local_chrome;
+	//public static String local_chrome;
 	public static String local_FFbrowser;
 	public String Button_Click_Time;
 	public String message_write_time;
@@ -36,12 +34,12 @@ public class Set {
 		log = Logger.getLogger(BeforeClass.class.getName());
 		property.load(new FileReader("Config//config.properties"));
 		AppURL = property.getProperty("App_url");
-		local_chrome = property.getProperty("local_chrome");
+		//local_chrome = property.getProperty("local_chrome");
 		local_FFbrowser = property.getProperty("local_FFbrowser");
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-	        WebDriver driver = new FirefoxDriver();
+	        
 		
 		
 		if ((local_chrome.equals("yes"))) {
@@ -56,9 +54,8 @@ public class Set {
 
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
-			driver.manage().window().maximize();
-			WebDriverManager.firefoxdriver().setup();
-			String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver";
+			WebDriverManager.firefoxdriver().setup();	
+			String path = "C:\\Users\\Administrator\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
 	                System.setProperty("webdriver.gecko.driver",path);
 			DesiredCapabilities capabilities = new DesiredCapabilities();
                         capabilities.setCapability("marionette", false); 
@@ -67,7 +64,7 @@ public class Set {
 			options.addArguments("--disable-notifications");
 			options.merge(capabilities);
 			FirefoxDriver driver =  new FirefoxDriver(options);
-                        //driver.manage().window().maximize();
+                        driver.manage().window().maximize();
 			Thread.sleep(1000);
 		} else {
 

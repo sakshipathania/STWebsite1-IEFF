@@ -61,9 +61,8 @@ public class Set {
 	                //System.setProperty("webdriver.gecko.driver",path);
 			DesiredCapabilities capabilities = new DesiredCapabilities();
                         capabilities.setCapability("marionette", true); 
-			//FirefoxOptions options = new FirefoxOptions();
-			FirefoxOptions options = new FirefoxOptions().setLogLevel(FirefoxDriverLogLevel.TRACE);
-			FirefoxDriver driver =  new FirefoxDriver(options);
+			FirefoxOptions options = new FirefoxOptions();
+	                FirefoxDriver driver =  new FirefoxDriver(options);
 			options.addArguments("--disable-notifications");
 			options.merge(capabilities);
                         driver.manage().window().maximize();

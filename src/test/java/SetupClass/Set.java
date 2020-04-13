@@ -41,8 +41,6 @@ public class Set {
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-		//String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver";
-	        //System.setProperty("webdriver.gecko.driver",path);
 	        WebDriver driver = new FirefoxDriver();
 		
 		
@@ -58,13 +56,16 @@ public class Set {
 
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
+			driver.manage().window().maximize();
 			WebDriverManager.firefoxdriver().setup();
+			String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver";
+	                System.setProperty("webdriver.gecko.driver",path);
+			driver = new FirefoxDriver(options);
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");
 			DesiredCapabilities capabilities = new DesiredCapabilities();
                         capabilities.setCapability("marionette", false); 
-			driver.manage().window().maximize();
-			driver = new FirefoxDriver(options);
+			options.merge(capabilities);
                         driver.manage().window().maximize();
 			Thread.sleep(1000);
 		} else {

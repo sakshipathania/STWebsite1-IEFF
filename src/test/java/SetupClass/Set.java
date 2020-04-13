@@ -27,6 +27,8 @@ public class Set {
 	public String Button_Click_Time;
 	public String message_write_time;
 	public String TestFile = "C:\\Users\\slide53\\eclipse-workspace\\SlideTeamWebsiteFormsAuto\\write.txt";
+	public String path = "c:\\Users\\downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
+	System.setProperty = ("webdriver.gecko.driver",path);
 	
 	
 	@BeforeClass
@@ -53,8 +55,6 @@ public class Set {
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
 			WebDriverManager.firefoxdriver().setup();
-			String path = "c:\\Users\\downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
-	                System.setProperty = ("webdriver.gecko.driver",path);
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");
 			driver.manage().window().maximize();

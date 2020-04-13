@@ -40,7 +40,7 @@ public class Set {
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-		String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
+		String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver";
 	        System.setProperty("webdriver.gecko.driver",path);
 	        WebDriver driver = new FirefoxDriver();
 		

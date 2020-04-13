@@ -9,6 +9,8 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.Chromedriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -59,11 +61,10 @@ public class Set {
 	                System.setProperty("webdriver.gecko.driver",path);
 			DesiredCapabilities capabilities = new DesiredCapabilities();
                         capabilities.setCapability("marionette", false); 
-			driver = new FirefoxDriver(options);
+			FirefoxDriver driver =  new FirefoxDriver(options);
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");
 			options.merge(capabilities);
-			FirefoxDriver driver =  new FirefoxDriver(options);
                         driver.manage().window().maximize();
 			Thread.sleep(1000);
 		} else {

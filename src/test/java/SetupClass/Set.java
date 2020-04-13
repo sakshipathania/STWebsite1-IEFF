@@ -8,6 +8,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -60,6 +61,8 @@ public class Set {
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+                        capabilities.setCapability("marionette", false); 
 			driver.manage().window().maximize();
 			driver = new FirefoxDriver(options);
                         driver.manage().window().maximize();

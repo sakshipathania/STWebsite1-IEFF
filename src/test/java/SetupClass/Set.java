@@ -56,6 +56,7 @@ public class Set {
 
 		// if (browser.equalsIgnoreCase("chrome"))
 		else if ((local_FFbrowser.equals("yes"))) {
+			Thread.sleep(5000);
 			WebDriverManager.firefoxdriver().setup();	
 			String path = "C://Users//Administrator//Downloads//geckodriver-v0.26.0-win64//geckodriver.exe";
 	                System.setProperty("webdriver.gecko.driver",path);
@@ -66,7 +67,7 @@ public class Set {
 			options.addArguments("--disable-notifications");
 			options.merge(capabilities);
                         driver.manage().window().maximize();
-			Thread.sleep(1000);
+			Thread.sleep(10000);
 		} else {
 
 			System.out.println("platform does not provide");
@@ -74,9 +75,9 @@ public class Set {
 		}
 
 		driver.get(AppURL);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	    driver.manage().deleteAllCookies();
-	    Thread.sleep(2000);
+	    Thread.sleep(5000);
 
 			
 		}
@@ -84,9 +85,9 @@ public class Set {
 	
 	@AfterClass
 	public static void after_Class() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.quit();  //->> don't want to close the browser for now
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	
 	}
 

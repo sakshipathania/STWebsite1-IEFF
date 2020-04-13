@@ -60,13 +60,14 @@ public class Set {
 			WebDriverManager.firefoxdriver().setup();
 			String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver";
 	                System.setProperty("webdriver.gecko.driver",path);
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+                        capabilities.setCapability("marionette", false); 
 			driver = new FirefoxDriver(options);
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("--disable-notifications");
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-                        capabilities.setCapability("marionette", false); 
 			options.merge(capabilities);
-                        driver.manage().window().maximize();
+			FirefoxDriver driver =  new FirefoxDriver(options);
+                        //driver.manage().window().maximize();
 			Thread.sleep(1000);
 		} else {
 

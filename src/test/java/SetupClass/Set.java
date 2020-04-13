@@ -27,8 +27,7 @@ public class Set {
 	public String Button_Click_Time;
 	public String message_write_time;
 	public String TestFile = "C:\\Users\\slide53\\eclipse-workspace\\SlideTeamWebsiteFormsAuto\\write.txt";
-	public String path = "c:\\Users\\downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
-	System.setProperty = ("webdriver.gecko.driver",path);
+	
 	
 	
 	@BeforeClass
@@ -41,7 +40,11 @@ public class Set {
 		// on source lab setup
 		AppURL = property.getProperty("App_url");
 		System.out.println("Bname=====" + AppURL);
-	
+		String path = "C:\\Users\\Downloads\\geckodriver-v0.23.0-win64\\geckodriver.exe";
+	        System.setProperty = ("webdriver.gecko.driver",path);
+	        WebDriver driver = new FirefoxDriver();
+		
+		
 		if ((local_chrome.equals("yes"))) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
